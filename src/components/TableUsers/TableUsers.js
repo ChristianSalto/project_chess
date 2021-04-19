@@ -18,12 +18,14 @@ import Load from './../Load/Load';
 const TableUsers = () => {
   const classes = useStyles();
   const [data, setData] = useState([]);
+  // const [photo, setPhoto] = useState([]);
 
 
 
 
   useEffect(() => {
     const handleApi = async () => {
+      let photo = []
 
       Promise.all(users.map(async (user) => {
 
@@ -31,6 +33,16 @@ const TableUsers = () => {
         const { chess_rapid } = await getUserChessStats(user)
         const { last } = chess_rapid;
         const { rating } = last;
+
+
+        // const avatarPerfil = avatar.split('/')
+
+
+        photo.push(avatar);
+
+
+        localStorage.setItem('photo', JSON.stringify(photo))
+
 
         setData(data => [...data, {
           avatar,

@@ -14,7 +14,7 @@ import { useStyles } from './styles';
 
 const Nav = () => {
   const style = useStyles();
-  const history = useHistory()
+  const history = useHistory();
   const [route, setRoute] = useState("");
 
   const handleChangeNav = (event, value) => {
