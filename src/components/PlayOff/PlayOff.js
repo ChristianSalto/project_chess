@@ -25,7 +25,7 @@ export const PlayOff = () => {
         </Typography>
       </Box>
       <Tournament />
-      <Back />
+      <Back path="/torneos" />
     </Container >
   )
 }

@@ -5,8 +5,11 @@ import Avatar from '@material-ui/core/Avatar';
 import { Typography } from '@material-ui/core';
 
 import { styles } from './styles'
+import Card from './../Card/Card'
 
 const Tournament = () => {
+  const playersNum = new Array(7);
+
   const photo = JSON.parse(localStorage.getItem('photo'));
   photo.sort(() => Math.random() - 0.5);
 
@@ -24,6 +27,9 @@ const Tournament = () => {
           < Avatar key={index} src={item} className={styles().avatar} />
         )}
       </Box>
+      {playersNum.map((item, index) =>
+        <Card />
+      )}
     </Container>
   )
 }

@@ -4,11 +4,11 @@ import { Button } from '@material-ui/core';
 import { useStyles } from './styles';
 
 
-export const Back = () => {
+export const Back = ({ path }) => {
   const styles = useStyles()
 
   return (
-    <Link to="/" className={styles.link}>
+    <Link to={path} className={styles.link}>
       <Button>
         <span className={styles.span}>&#9668;</span>back
         </Button>

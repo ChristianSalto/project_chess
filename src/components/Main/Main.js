@@ -27,7 +27,7 @@ export const Main = () => {
       </header>
       <main>
         <TableUsers />
-        <Form />
+        {/* <Form /> */}
       </main>
     </Container>
   )
